@@ -61,3 +61,27 @@ TextButton-> widget munculin tombol
 ->drawer pada masing2 file
 ->widget form pada form dart lalu save input ke objek model yang dibuat
 ->ambil objek yang dibuat pada data lalu tampilkan dengan widget card
+
+## Tugas9
+ 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+ => bisa, kita bisa membuat variabel json sendiri dan kita bisa membuat variabel untuk parse variabel json itu sendiri. Hal ini mungkin akan lebih ribet karena kita tidak bisa langsung mengambil data json dari internet (jika data nya banyak akan memakan waktu yang lama), tetapi, hal ini bisa menghindari cross API yang terkadang muncul di chrome, agar kita tidak perlu setting keamanan website
+
+ 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+ a. Future Builder: Widget untuk eksekusi sebuah fungsi asinkron, dan tergantung dari fungsi itu, UI akan terupdate
+ b. InkWell: Widget untuk membuat sebuah area yang dapat menerima sebuah respon klik dari pengguna
+ c. Card->Panel nampilih kartu, kayak container
+ d. Drawer->Untuk mindah layar 
+ e. Column,Row-> Layout Widget
+ f. TextButton-> widget munculin tombol
+
+ 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+ => pertama, buat model untuk data json yang diambil, dari quicktype. Jalankan add http agar bisa ambil json dan beri user permision agar flutter dapat akses internet. Kemudian membuat fungsi fetcher untuk ambil data json dari url data json tersebut berasal, lalu masukan data dari hasil fetch tersebut ke sebuah list atau struktur data yang diinginkan lalu return list tersebut sebagai parameter return fungsi fetcher. Panggil fungsi fetcher pada widget yang diinginkan
+
+ 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+ a. bikin file untuk halaman list dari watchlist
+ b. nambahin listTile di drawer pada setiap halaman/file
+ c. bikin file untuk model mywatchlist yang berisi kode dari hasil parse data json
+ d. buat fetch untuk data (saya pakai dari yang tutor 8 dan di modifikasi)
+ e. tampilih pada halaman list dari watchlist
+ f. buat halaman file dart untuk part detail lalu widget inkwell yang saat dipencet akan membuka halaman tersebut beserta mengirim data dari film yang dipilih
+ g. data yang dipilih akan ditampilkan detailnya pada halaman detail.

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/data.dart';
-import 'package:counter_7/objectModel.dart';
+import 'package:counter_7/model/objectModel.dart';
+import 'package:counter_7/page/myWatchListPage.dart';
 
 
 
@@ -62,6 +63,16 @@ class _MyFormPageState extends State<MyFormPage> {
                     );
                   },
                 ),
+                ListTile(
+                  title: const Text('Watch List'),
+                  onTap: () {
+                      // Route menu ke halaman to do
+                      Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyWatchListPage()),
+                      );
+                  },
+              ),
               ],
             ),
           ),
